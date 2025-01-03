@@ -1,0 +1,63 @@
+.text-animate {
+  animation: text-animate 0.5s ease forwards;
+  opacity: 0;
+}
+
+.text-animate-hover {
+  opacity: 1;
+}
+
+@keyframes text-animate {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+.skills-title {
+  font-size: 5rem;
+  margin-bottom: 30px;
+  color: #cb2d6f;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+// .skill-page {
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-start; /* Align content to the top */
+//   flex-wrap: wrap; /* Allow wrapping of elements */
+//   padding: 40px;
+// }
+
+// .text-zone {
+//   text-align: center;
+//   flex-basis: 100%; /* Take up full width on small screens */
+//   margin-bottom: 20px;
+// }
+
+// .skills-images {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 20px;
+//   justify-content: center; /* Center images horizontally */
+//   align-items: flex-start;
+//   max-width: 100%; /* Ensure container doesn't exceed page width */
+//   margin: 0 auto; /* Center the container on the page */
+// }
+
+// .skill-img {
+//   width: 80px;
+//   height: 80px;
+//   object-fit: contain;
+//   border-radius: 10px;
+//   transition: transform 0.3s ease;
+// }
+
+// .skill-img:hover {
+//   transform: scale(1.1);
+// }

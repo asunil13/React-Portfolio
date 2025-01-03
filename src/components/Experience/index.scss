@@ -1,0 +1,263 @@
+@keyframes text-animate {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes arrow-animate {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+@keyframes line-animate {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 200%;
+  }
+}
+
+.experience {
+  padding: 30px;
+  color: #fff;
+  font-family: 'Titillium Web', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+
+  .experience-title {
+    font-size: 5rem;
+    margin-bottom: 30px;
+    color: #cb2d6f;
+  }
+
+  .timeline-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    padding: 0 40px;
+    justify-content: center;
+
+    .arrow {
+      background-color: transparent;
+      border: none;
+      color: #cb2d6f;
+      font-size: 2.5rem;
+      cursor: pointer;
+      padding: 0 15px;
+      z-index: 3;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: color 0.3s ease;
+      opacity: 0; /* Initially hidden */
+      animation: arrow-animate 3s ease forwards; /* Animation with delay */
+      animation-delay: 5s; /* 5-second delay for arrows */
+    }
+
+    .left-arrow { 
+      left: 0;
+    }
+
+    .right-arrow { 
+      right: 0;
+    }
+
+    .timeline {
+      display: flex;
+      position: relative;
+      align-items: flex-start;
+      justify-content: flex-start;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      width: calc(100% - 80px); /* Adjusted width to account for padding on both sides */
+      padding: 50px 0;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        width: 200%;
+        height: 2px;
+        background-color: white;
+        z-index: 1;
+        opacity: 0; /* Initially hidden */
+        animation: line-animate 3s ease forwards; /* Animation with delay */
+        animation-delay: 2.5s; /* 5-second delay for timeline line */
+      }
+
+      .timeline-item {
+        flex: 0 0 auto;
+        position: relative;
+        min-width: 350px;
+        max-width: 400px;
+        height: 200px;
+        margin: 15px 25px;
+        padding: 30px;
+        background-color: #cb2d6f;
+        color: white;
+        border: 1px solid #cb2d6f;
+        border-radius: 8px;
+        text-align: left;
+        z-index: 2;
+        transition: all 0.5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        animation: text-animate 4s ease forwards;
+        opacity: 0; /* Initially hidden */
+        animation-delay: 3.5s; /* 7-second delay for boxes */
+        
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 8px;
+          box-shadow: 0 0 15px #cb2d6f, 0 0 50px #cb2d6f;
+          opacity: 1;
+          transition: all 0.3s ease-in-out;
+          z-index: -1;
+        }
+
+        &:hover {
+          height: auto;
+          min-height: 400px;
+          transform: scale(1.1);
+          background-color: white;
+          color: #cb2d6f;
+          z-index: 5;
+
+          .description {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            margin-top: 15px;
+          }
+
+          &::before {
+            box-shadow: 0 0 20px #cb2d6f, 0 0 60px #cb2d6f;
+          }
+        }
+
+        h3 {
+          font-size: 2rem;
+          font-family: 'Coolvetica';
+          margin-bottom: 10px;
+          color: white;
+          transition: color 0.3s ease-in-out;
+          text-align: center;
+        }
+
+        h4 {
+          font-size: 1.5rem;
+          font-family: sans-serif;
+          font-weight: bold;
+          margin-bottom: 10px;
+          color: white;
+          transition: color 0.3s ease-in-out;
+          text-align: center;
+        }
+
+        .date {
+          font-size: 1.3rem;
+          color: white;
+          transition: color 0.3s ease-in-out;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+
+        .description {
+          font-size: 1.4rem;
+          line-height: 1.4;
+          color: #cb2d6f;
+          transition: all 0.5s ease-in-out;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(20px);
+          margin-top: 0;
+          padding-right: 15px; /* Added padding to the right */
+          overflow-y: auto;
+          max-height: 250px;
+          width: calc(100% - 30px); /* Ensures it fits within the box */
+          box-sizing: border-box; /* Includes padding in the width calculation */
+
+          &::-webkit-scrollbar {
+            width: 5px;
+            display: block;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: rgba(203, 45, 111, 0.1);
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: rgba(203, 45, 111, 0.5);
+            border-radius: 10px;
+          }
+
+          /* New styles for list items */
+          ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+          }
+
+          li {
+            margin-bottom: 10px;
+            text-align: left;
+            position: relative;
+            padding-left: 20px;
+
+            &:before {
+              content: "•";
+              position: absolute;
+              left: 0;
+              color: #cb2d6f;
+            }
+
+            &.skills {
+              margin-top: 15px;
+              font-weight: bold;
+              border-top: 1px solid #cb2d6f;
+              padding-top: 10px;
+            }
+          }
+        }
+
+        &:hover h3,
+        &:hover h4,
+        &:hover p {
+          color: #cb2d6f;
+        }
+      }
+    }
+  }
+}

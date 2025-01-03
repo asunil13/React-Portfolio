@@ -1,0 +1,200 @@
+.text-animate {
+    animation: text-animate 0.5s ease forwards;
+    opacity: 0;
+  }
+  
+  .text-animate-hover {
+    opacity: 1;
+  }
+  
+  @keyframes text-animate {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px); /* Starting position */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* End position */
+    }
+  }
+  
+  .contact-title {
+    font-size: 5rem;
+    margin-bottom: 30px;
+    color: #cb2d6f; /* Pinkish color for the "CONTACT" text */
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .text-zone {
+    text-align: center;
+  }
+  
+  .contact-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    border: 3px solid #cb2d6f;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-top: 30px;
+    opacity: 0; /* Start hidden */
+    animation: slideIn 2s ease-out 3s forwards; /* Added delay */
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Spacing between fields */
+  }
+  
+  .contact-form .form-row {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 16px; /* More padding inside the fields */
+    font-size: 1rem;
+    border: 1px solid #cb2d6f; /* Set border color to pink */
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Added margin to create space between the fields */
+    color: #cb2d6f; /* Set text color to pink */
+    opacity: 0;
+    animation: fadeInField 2s ease forwards;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #cb2d6f; /* Set placeholder text color to pink */
+  }
+  
+  .contact-form .half {
+    width: 48%;
+  }
+  
+  .contact-form .flat-button {
+    background-color: #cb2d6f;
+    color: white;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+    opacity: 0; 
+    animation: fadeInButton 2s ease 5s forwards;
+  }
+  
+  .contact-form .flat-button:hover {
+    background-color: #a91f4b;
+    transform: scale(1.05);
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #a91f4b; /* Darker pink on focus */
+    box-shadow: 0 0 8px rgba(201, 46, 98, 0.5);
+    transform: scale(1.02); /* Slightly grow the input fields */
+  }
+  
+  .info-map {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .info-map span {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-form .form-row {
+      flex-direction: column;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+    }
+  }
+  
+  p {
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0;
+    animation: fadeInParagraph 2s ease 3s forwards; /* Added delay for paragraph */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInField {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInParagraph {
+    0% {
+      opacity: 0;
+      transform: translateY(30px); /* Start position */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End position */
+    }
+  }
+  
+  @keyframes fadeInButton {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Starting position */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End position */
+    }
+  }
+  
