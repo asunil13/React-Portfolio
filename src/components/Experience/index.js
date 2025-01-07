@@ -63,12 +63,9 @@ const Experience = () => {
                             <ul className="description">
                                 <li>Currently participating in the UW-Madison Grand Challenges Scholars Program, a multi-year initiative for engineering students</li>
                                 <li>Engaging in curricular and co-curricular activities aligned with AI grand challenge theme</li>
-                                <li>Developing competencies in:</li>
-                                <li>Research and creative problem-solving within engineering</li>
-                                <li>Embracing a multidisciplinary and entrepreneurial mindset</li>
-                                <li>Gaining global perspectives through diverse experiences</li>
-                                <li>Contributing to society through service and social consciousness</li>
+                                <li>Developing competencies in: research and creative problem-solving within engineering, multidisciplinary and entrepreneurial mindset, global perspectives through diverse experiences, and contributing to society through service and social consciousness</li>
                                 <li>Preparing to address complex engineering challenges in sustainability and security</li>
+                                <li>Aiming to make a meaningful impact on the world by tackling 21st-century societal challenges through engineering solutions</li>
                                 <li className="skills">SKILLS: Research & Analysis, Creative Problem-Solving, Multidisciplinary Collaboration, Entrepreneurial Innovation, Global Perspective</li>
                             </ul>
                         </div>
