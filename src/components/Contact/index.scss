@@ -10,18 +10,18 @@
   @keyframes text-animate {
     0% {
       opacity: 0;
-      transform: translateX(-100px); /* Starting position */
+      transform: translateX(-100px);
     }
     100% {
       opacity: 1;
-      transform: translateX(0); /* End position */
+      transform: translateX(0); 
     }
   }
   
   .contact-title {
     font-size: 5rem;
     margin-bottom: 30px;
-    color: #cb2d6f; /* Pinkish color for the "CONTACT" text */
+    color: #cb2d6f; 
     font-weight: bold;
     text-transform: uppercase;
   }
