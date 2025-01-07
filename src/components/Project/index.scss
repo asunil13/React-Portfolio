@@ -1,0 +1,56 @@
+.container.project-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 100vh;
+  
+    .text-zone2 {
+      text-align: center;
+    }
+  
+    .project-title {
+      font-size: 5rem;
+      color: #cb2d6f;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.2rem;
+    }
+  
+    .projects-gallery {
+      margin-top: 40px;
+      text-align: center;
+  
+      .coming-soon {
+        font-size: 1.5rem;
+        color: #cb2d6f;
+        font-weight: bold;
+        animation: fadeIn 2s infinite alternate;
+      }
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
