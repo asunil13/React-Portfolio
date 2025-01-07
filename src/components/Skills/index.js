@@ -41,7 +41,6 @@ const Skill = () => {
     { src: Image7, alt: "Java" },
     { src: Image18, alt: "R" },
     { src: Image1, alt: "C" },
-    { src: Image2, alt: "C++" },
     { src: Image19, alt: "SQL" },
     { src: Image4, alt: "Docker" },
     { src: Image9, alt: "Kotlin" },
