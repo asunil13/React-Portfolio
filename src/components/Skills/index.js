@@ -26,7 +26,7 @@ const Skill = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover');
+      setLetterClass('text-animated-hover');
     }, 4000);
 
     return () => clearTimeout(timer);

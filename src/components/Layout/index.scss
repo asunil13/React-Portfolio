@@ -112,14 +112,14 @@
   .button-container {
     margin-left: 200px;
     display: flex;
-    flex-direction: column; /* Stack the buttons vertically */
-    gap: 25px; /* Add space between buttons */
+    flex-direction: column; 
+    gap: 25px; 
     margin-top: 25px;
   }
 
   .flat-button {
     color: #CB2D6F;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 400;
     letter-spacing: 4px;
     font-family: 'sans-serif';
