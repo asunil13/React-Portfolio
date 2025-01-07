@@ -1,6 +1,7 @@
 import AnimatedLetters from "../AnimatedLetters";
 import { useEffect, useState } from "react";
 import Loader from 'react-loaders';
+import Resume from "/Users/aditisunil/Documents/Personal/React-Portfolio/src/Resume.pdf";
 
 const About = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -34,9 +35,12 @@ const About = () => {
         </div>
         {/* Button Below the Box */}
         <div className="button-container">
-          <a href="" className="flat-button" download>VIEW MY RESUME</a>
+          <a href={Resume} className="flat-button" download>VIEW MY RESUME</a>
           <a href="https://www.credly.com/users/aditi-sunil" target="_blank" className="flat-button">
             CREDLY CERTIFICATES
+          </a>
+          <a href="https://www.linkedin.com/in/aditi-sunil/" target="_blank" className="flat-button">
+            LINKEDIN
           </a>
         </div>
       </div>
