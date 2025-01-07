@@ -1,37 +1,56 @@
 import { useState, useEffect } from 'react';
-import AnimatedLetters from "../AnimatedLetters"; // Import your AnimatedLetters component
-import Loader from 'react-loaders'; // Import the Loader component for animation
-import './index.scss'; // Import the styles for the component
-import Image1 from '../../assets/images/c.png'; // Import the image for the component
-import Image2 from '../../assets/images/c++.png'; // Import the image for the component
-import Image3 from '../../assets/images/css-icon.svg'; // Import the image for the component
-import Image4 from '../../assets/images/docker.webp'; // Import the image for the component
-import Image5 from '../../assets/images/git.png'; // Import the image for the component
-import Image6 from '../../assets/images/html-icon.svg'; // Import the image for the component
-import Image7 from '../../assets/images/java.webp'; // Import the image for the component
-import Image8 from '../../assets/images/js-icon.svg'; // Import the image for the component
-import Image9 from '../../assets/images/kotlin.png'; // Import the image for the component
-import Image14 from '../../assets/images/microsoft.webp'; // Import the image for the component
-import Image15 from '../../assets/images/powerautomate.png'; // Import the image for the component
-import Image16 from '../../assets/images/powerbi.png'; // Import the image for the component
-import Image17 from '../../assets/images/python.png'; // Import the image for the component
-import Image18 from '../../assets/images/r.png'; // Import the image for the component
-import Image19 from '../../assets/images/sql.png'; // Import the image for the component
-import Image20 from '../../assets/images/react-icon.svg'; // Import the image for the component 
-import Image21 from '../../assets/images/powerapps.png'; // Import the image for the component 
+import AnimatedLetters from "../AnimatedLetters";
+import Loader from 'react-loaders';
+import './index.scss';
+import Image1 from '../../assets/images/c.png';
+import Image2 from '../../assets/images/c++.png';
+import Image3 from '../../assets/images/css-icon.svg';
+import Image4 from '../../assets/images/docker.webp';
+import Image5 from '../../assets/images/git.png';
+import Image6 from '../../assets/images/html-icon.svg';
+import Image7 from '../../assets/images/java.webp';
+import Image8 from '../../assets/images/js-icon.svg';
+import Image9 from '../../assets/images/kotlin.png';
+import Image14 from '../../assets/images/microsoft.webp';
+import Image15 from '../../assets/images/powerautomate.png';
+import Image16 from '../../assets/images/powerbi.png';
+import Image17 from '../../assets/images/python.png';
+import Image18 from '../../assets/images/r.png';
+import Image19 from '../../assets/images/sql.png';
+import Image20 from '../../assets/images/react-icon.svg';
+import Image21 from '../../assets/images/powerapps.png';
 
 const Skill = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
-  const skillsArray = ['S', 'K', 'I', 'L', 'L', 'S'];  // Array for "SKILLS" animation
+  const skillsArray = ['S', 'K', 'I', 'L', 'L', 'S'];
 
-  // Using useEffect hook to transition the animation class after 4 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setLetterClass('text-animate-hover');
-    }, 4000);  // Animation transition after 4 seconds
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
+
+  const images = [
+    { src: Image6, alt: "HTML" },
+    { src: Image3, alt: "CSS" },
+    { src: Image8, alt: "JS" },
+    { src: Image20, alt: "React" },
+    { src: Image17, alt: "Python" },
+    { src: Image7, alt: "Java" },
+    { src: Image18, alt: "R" },
+    { src: Image1, alt: "C" },
+    { src: Image2, alt: "C++" },
+    { src: Image19, alt: "SQL" },
+    { src: Image4, alt: "Docker" },
+    { src: Image9, alt: "Kotlin" },
+    { src: Image5, alt: "Git" },
+    { src: Image14, alt: "Microsoft" },
+    { src: Image15, alt: "Power Automate" },
+    { src: Image16, alt: "Power BI" },
+    { src: Image21, alt: "Power Apps" }
+  ];
 
   return (
     <>
@@ -41,29 +60,20 @@ const Skill = () => {
             <AnimatedLetters letterClass={letterClass} strArray={skillsArray} idx={15} />
           </h1>
           <p className="skills-text">
-              Languges, frameworks, and tools I have worked with.
+            Languages, frameworks, and tools I have worked with.
           </p>
         </div>
-        
+
         <div className="skills-images">
-          <img src={Image6} alt="HTML" className="skill-img" />
-          <img src={Image3} alt="CSS" className="skill-img" />
-          <img src={Image8} alt="JS" className="skill-img" />
-          <img src={Image20} alt="React" className="skill-img" />
-          <img src={Image17} alt="Python" className="skill-img" />
-          <img src={Image7} alt="Java" className="skill-img" />
-          <img src={Image18} alt="R" className="skill-img" />
-          <img src={Image1} alt="C" className="skill-img" />
-          <img src={Image2} alt="C++" className="skill-img" />
-          <img src={Image19} alt="SQL" className="skill-img" />
-          <img src={Image4} alt="Docker" className="skill-img" />
-          <img src={Image9} alt="Kotlin" className="skill-img" />
-          <img src={Image5} alt="Git" className="skill-img" />
-          <img src={Image14} alt="Microsoft" className="skill-img" />
-          <img src={Image15} alt="Power Automate" className="skill-img" />
-          <img src={Image16} alt="Power BI" className="skill-img" />
-          <img src={Image21} alt="Power Apps" className="skill-img" />
-          <img src={Image17} alt="Python" className="skill-img" />
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              className="skill-img"
+              style={{ '--delay': `${index * 0.2}s` }}
+            />
+          ))}
         </div>
       </div>
       <Loader type="pacman" />
