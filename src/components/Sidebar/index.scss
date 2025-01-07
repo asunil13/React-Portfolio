@@ -1,6 +1,6 @@
 .nav-bar {
     background: #010000;
-    width: 60px;
+    width: 80px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -115,6 +115,13 @@ a{
         &::after {
             content: 'CONTACT';
         }
+    }
+
+    a.project-link {
+        &::after {
+            content: 'PROJECTS';
+        }
+
     }
 
 

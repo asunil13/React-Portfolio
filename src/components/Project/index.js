@@ -1,10 +1,13 @@
+import Loader from 'react-loaders';
+
 const Project = () => {
 
-    return (
-        <div>
-        <h1>Projects</h1>
-        </div>
-    );
-    }
+  return (
+    <>
+      
+      <Loader type="pacman" />
+    </>
+  );
+};
 
 export default Project;
