@@ -3,7 +3,6 @@ import AnimatedLetters from "../AnimatedLetters";
 import Loader from 'react-loaders';
 import './index.scss';
 import Image1 from '../../assets/images/c.png';
-import Image2 from '../../assets/images/c++.png';
 import Image3 from '../../assets/images/css-icon.svg';
 import Image4 from '../../assets/images/docker.webp';
 import Image5 from '../../assets/images/git.png';
@@ -19,6 +18,7 @@ import Image18 from '../../assets/images/r.png';
 import Image19 from '../../assets/images/sql.png';
 import Image20 from '../../assets/images/react-icon.svg';
 import Image21 from '../../assets/images/powerapps.png';
+import Image22 from '../../assets/images/figma.png';
 
 const Skill = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -48,7 +48,8 @@ const Skill = () => {
     { src: Image14, alt: "Microsoft" },
     { src: Image15, alt: "Power Automate" },
     { src: Image16, alt: "Power BI" },
-    { src: Image21, alt: "Power Apps" }
+    { src: Image21, alt: "Power Apps",
+      src: Image22, alt: "Figma"}
   ];
 
   return (
