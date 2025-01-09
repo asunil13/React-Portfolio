@@ -16,9 +16,9 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    
+  
     emailjs
-      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
+      .sendForm('service_57q9kmi', 'template_ean6m5c', form.current, '2vqLmyGzArvXIG8un')
       .then(
         () => {
           alert('Message successfully sent!');
@@ -29,6 +29,7 @@ const Contact = () => {
         }
       );
   };
+  
 
   return (
     <>
