@@ -65,28 +65,6 @@
       margin-bottom: 40px;
       font-weight: 400;
       position: relative;
-
-      // &::before {
-      //   content: '<description>';
-      //   font-family: 'La Belle Aurore';
-      //   font-size: 18px;
-      //   position: absolute;
-      //   margin-top: -10px;
-      //   left: 10px;
-      //   opacity: 0.6;
-      //   line-height: 18px;
-      // }
-
-      // &::after {
-      //   content: '</description>';
-      //   font-family: 'La Belle Aurore';
-      //   font-size: 18px;
-      //   position: absolute;
-      //   left: -30px;
-      //   bottom: -20px;
-      //   margin-left: 20px;
-      //   opacity: 0.6;
-      // }
     }
 
     p {
@@ -128,20 +106,20 @@
     border: 1px solid #CB2D6F;
     animation: slideIn 1s ease-out, fadeIn 1s 3s backwards;
     white-space: nowrap;
-    display: flex; /* Use flexbox to center the text */
-    justify-content: center; /* Center text horizontally */
-    align-items: center; /* Center text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    text-align: center; /* Ensure text is centered */
-    height: auto; /* Adjust height based on padding */
+    text-align: center;
+    height: auto;
 
     &:hover {
       background: #CB2D6F;
       color: white;
       box-shadow: 0 0 10px #CB2D6F, 0 0 40px #CB2D6F;
-      transform: scale(1.1); /* Slight zoom effect */
+      transform: scale(1.1);
     }
 
     &:active {
@@ -156,5 +134,79 @@
       color: white;
       text-decoration: none;
     }
+  }
+}
+
+// Responsive styles
+@media screen and (max-width: 968px) {
+  .tags {
+    left: 20px;
+    font-size: 16px;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+
+  .about-page {
+    padding-left: 5%;
+    
+    .text-zone {
+      width: 90%;
+      
+      h1 {
+        font-size: 50px;
+      }
+    }
+    
+    .button-container {
+      margin-left: 0;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tags {
+    font-size: 14px;
+  }
+  
+  .top-tags {
+    top: 20px;
+  }
+
+  .about-page {
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    .text-zone {
+      width: 100%;
+      
+      h1 {
+        font-size: 40px;
+      }
+      
+      p {
+        font-size: 16px;
+      }
+    }
+    
+    .flat-button {
+      font-size: 20px;
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .container {
+      padding-top: 70px;  // Match the navbar height
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+      padding-top: 60px;  // Match the smaller navbar height
   }
 }

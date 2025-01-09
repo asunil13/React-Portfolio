@@ -33,26 +33,33 @@
 
 .skill-page {
   display: flex;
-  justify-content: center;
-  align-items: flex-start; 
-  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 100vh;
   padding: 40px;
+  overflow-y: auto;
+  position: relative;
 }
 
 .text-zone2 {
   text-align: center;
-  flex-basis: 100%; 
-  margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 40px;
+  position: sticky;
+  top: 0;
+  padding: 20px 0;
+  z-index: 2;
 }
 
 .skills-images {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 50px;
-  justify-content: center; 
-  align-items: flex-start;
-  max-width: 70%; /* Ensure container doesn't exceed page width */
-  margin: 0 auto; /* Center the container on the page */
+  justify-items: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
 }
 
 .skill-img {
@@ -61,8 +68,111 @@
   object-fit: contain;
   border-radius: 10px;
   transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.5);
+  }
 }
 
-.skill-img:hover {
-  transform: scale(1.5);
+// Responsive styles
+@media screen and (max-width: 1200px) {
+  .skills-title {
+    font-size: 4rem;
+  }
+
+  .skills-text {
+    font-size: 1.4rem;
+  }
+
+  .skills-images {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 40px;
+    max-width: 900px;
+  }
+
+  .skill-img {
+    width: 90px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .skill-page {
+    padding: 90px 20px 40px;
+  }
+
+  .skills-title {
+    font-size: 3rem;
+  }
+
+  .skills-text {
+    font-size: 1.2rem;
+  }
+
+  .skills-images {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 30px;
+    max-width: 700px;
+  }
+
+  .skill-img {
+    width: 80px;
+    height: 60px;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+  .text-zone2 {
+    padding: 15px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skill-page {
+    padding: 80px 10px 30px;
+  }
+
+  .skills-title {
+    font-size: 2.5rem;
+  }
+
+  .skills-text {
+    font-size: 1rem;
+  }
+
+  .skills-images {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .skill-img {
+    width: 60px;
+    height: 45px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .text-zone2 {
+    padding: 10px 0;
+  }
+}
+
+// Ensure smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Hide scrollbar but keep functionality
+.skill-page {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
