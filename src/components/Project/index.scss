@@ -8,7 +8,7 @@
     box-sizing: border-box;
     width: 100%;
     overflow-x: hidden;
-    position: relative;
+    overflow: auto;
 
     .project-title {
         font-size: 5rem;
@@ -20,6 +20,7 @@
         align-items: center;
         gap: 0.2rem;
         margin-bottom: 10px;
+        position: relative;
     }
 
     .projects-gallery {
@@ -48,12 +49,10 @@
             overflow: hidden;
             opacity: 0;
 
-            // Initial state
             &:not(.show) {
                 transform: translateY(60px);
             }
 
-            // Animated state
             &.show {
                 animation: fadeIn 0.6s ease forwards;
             }
