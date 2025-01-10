@@ -102,7 +102,7 @@ const Project = () => {
           <h1 className="project-title">
             <AnimatedLetters letterClass={letterClass} strArray={projectArray} idx={15} />
           </h1>
-          <p>Below are some of the projects I have worked on. Click on them to learn more!</p>
+          <p>Below are some of the projects I have worked on. Scroll to see them all!</p>
         </div>
 
         <div className="projects-gallery">
