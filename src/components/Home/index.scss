@@ -131,7 +131,11 @@
     
     .headshot {
       width: 45%;
-      margin-top: 30px;
+      margin-top: 20px; /* Reduced the margin-top to bring the image closer to the button */
+    }
+
+    .flat-button {
+      margin-top: 20px; /* Reduced the margin-top to bring the button closer to the image */
     }
   }
 
@@ -145,10 +149,12 @@
     .flat-button {
       padding: 12px 24px;
       font-size: 1rem;
+      margin-top: 15px; /* Reduced margin for the button */
     }
     
     .headshot {
       width: 70%;
+      margin-top: 0px; /* Reduced margin-top to bring the image closer to the button */
     }
   }
 }
