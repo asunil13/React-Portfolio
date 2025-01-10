@@ -38,13 +38,23 @@
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
 }
+// General reset to prevent any overflow
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;  // Prevent horizontal scrolling
+}
 
 .about-page {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-  padding-left: 10%;
+  padding-left: 20%;
+  max-width: 100%;  // Prevent overflow
+  box-sizing: border-box;
 
   .text-zone {
     position: relative;
@@ -58,6 +68,7 @@
     box-shadow: 0 0 10px #cb2d6f, 0 0 40px #cb2d6f;
     transition: all 0.3s ease-in-out;
     transform-origin: center center;
+    box-sizing: border-box; // To ensure padding does not affect width calculation
 
     h1 {
       font-size: 70px;
@@ -94,6 +105,7 @@
     flex-direction: column; 
     gap: 25px; 
     margin-top: 25px;
+    box-sizing: border-box;
   }
 
   .flat-button {
@@ -151,16 +163,19 @@
 
   .about-page {
     padding-left: 5%;
-    padding-top: 90px; 
+    padding-top: 90px;
     flex-direction: column;
     align-items: center;
+    width: 100%;  // Prevent overflow on smaller screens
+    box-sizing: border-box;
 
     .text-zone {
       width: 80%;
       height: auto;
       margin-bottom: 20px;
       padding: 15px;
-      
+      box-sizing: border-box;
+
       h1 {
         font-size: 50px;
       }
@@ -189,12 +204,15 @@
     padding-top: 60px; // Add padding to the top to avoid overlap
     flex-direction: column;
     align-items: center;
+    width: 100%;  // Ensure no overflow
+    box-sizing: border-box;
 
     .text-zone {
       width: 90%;
       height: auto;
       margin-bottom: 20px;
       padding: 10px;
+      box-sizing: border-box;
       
       h1 {
         font-size: 40px;
@@ -221,12 +239,12 @@
 
 @media screen and (max-width: 968px) {
   .container {
-      padding-top: 70px;  // Match the navbar height
+    padding-top: 70px;  // Match the navbar height
   }
 }
 
 @media screen and (max-width: 480px) {
   .container {
-      padding-top: 60px;  // Match the smaller navbar height
+    padding-top: 60px;  // Match the smaller navbar height
   }
 }

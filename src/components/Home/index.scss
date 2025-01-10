@@ -2,25 +2,33 @@
   display: flex; 
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 20px;
+  box-sizing: border-box;
 
   .text-zone {
-    width: 50%;
-    padding-right: 20px; 
+    width: 60%;
+    padding-right: 40px;
+    max-width: 100%;
+    
     h1 {
       color: #CB2D6F;
-      font-size: 75px;
+      font-size: clamp(3.5rem, 7vw, 6.5rem); // Significantly increased font size
       margin: 0;
       font-family: 'Coolvetica';
       font-weight: 400;
+      word-wrap: break-word;
+      line-height: 1.1; // Added to improve readability of larger text
     }
   }
 
   h2 {
     color: #7a7676;
-    margin-top: 20px;
+    margin-top: 30px; // Increased margin
     font-weight: 400;
-    font-size: 20px;
+    font-size: clamp(1.5rem, 3vw, 2.2rem); // Increased subtitle size
     font-family: 'sans-serif';
     letter-spacing: 3px;
     animation: fadeIn 1s 2.5s backwards;
@@ -28,14 +36,14 @@
 
   .flat-button {
     color: #CB2D6F;
-    font-size: 15px;
+    font-size: clamp(1rem, 2vw, 1.3rem); // Increased button text size
     font-weight: 400;
     letter-spacing: 4px;
     font-family: 'sans-serif';
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 15px 30px; // Increased padding
     border: 1px solid #CB2D6F;
-    margin-top: 25px;
+    margin-top: 40px; // Increased margin
     animation: slideIn 1s ease-out, fadeIn 1s 3s backwards;
     white-space: nowrap;
     display: inline-block;
@@ -52,7 +60,8 @@
   }
 
   .headshot {
-    width: 22%;
+    width: 30%; // Increased image size
+    max-width: 400px; // Increased max-width
     border-radius: 50%;
     object-fit: cover;
     animation: slideInRight 4s ease-out forwards;
@@ -89,18 +98,14 @@
     }
   }
 
-  // Responsive styles
   @media screen and (max-width: 1200px) {
     .text-zone {
-      width: 55%;
-      
-      h1 {
-        font-size: 60px;
-      }
+      width: 60%;
+      padding-top: 400px;
     }
     
     .headshot {
-      width: 25%;
+      width: 35%;
     }
   }
 
@@ -111,39 +116,39 @@
     .text-zone {
       width: 100%;
       padding-right: 0;
-      padding-bottom: 40px;
+      padding-bottom: 50px;
       text-align: center;
-      padding-top: 100px;
+      padding-top: 300px;
       
       h1 {
-        font-size: 50px;
+        font-size: clamp(3rem, 8vw, 5rem); // Adjusted for mobile
+      }
+      
+      h2 {
+        font-size: clamp(1.3rem, 4vw, 2rem); // Adjusted for mobile
       }
     }
     
     .headshot {
-      width: 40%;
-      margin-top: 20px;
+      width: 45%;
+      margin-top: 30px;
     }
   }
 
   @media screen and (max-width: 480px) {
+    padding: 15px;
+    
     .text-zone {
-      h1 {
-        font-size: 40px;
-      }
-      
-      h2 {
-        font-size: 16px;
-      }
+      padding-top: 100px;
     }
     
     .flat-button {
-      font-size: 13px;
-      padding: 8px 16px;
+      padding: 12px 24px;
+      font-size: 1rem;
     }
     
     .headshot {
-      width: 60%;
+      width: 70%;
     }
   }
 }
