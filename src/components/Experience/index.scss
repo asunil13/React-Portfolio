@@ -123,6 +123,14 @@
       right: 0;
     }
 
+    .skills {
+      margin-top: 15px;
+      font-weight: bold; 
+      border-top: 2px solid #cb2d6f; 
+      padding-top: 10px;
+      padding-bottom: 15px; 
+    }
+    
     .timeline {
       display: flex;
       position: relative;
@@ -217,6 +225,10 @@
           background-color: white;
           color: #cb2d6f;
           z-index: 5;
+
+          h3, h4, .date {
+            color: #cb2d6f;
+          }
 
           @media screen and (max-width: 768px) {
             transform: scale(1.05);
