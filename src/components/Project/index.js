@@ -55,7 +55,7 @@ const Project = () => {
       isExternal: true,
       secondButton: {
         text: 'Play Game',
-        link: 'https://asunil13.github.io/card_game/index.html'
+        link: '/card_game/index.html'
       }
     },
     {
@@ -111,7 +111,7 @@ const Project = () => {
               className={`project-card ${isVisible ? 'show' : ''}`} 
               key={index}
               style={{ 
-                animationDelay: `${index * 200}ms` // Each card appears 200ms after the previous one
+                animationDelay: `${index * 200}ms` 
               }}
             >
               <h3>{project.title}</h3>
@@ -121,7 +121,7 @@ const Project = () => {
                 {project.secondButton && (
                   <a 
                     href={project.secondButton.link} 
-                    target="_blank" 
+                    target={project.secondButton.target || '_blank'} 
                     rel="noopener noreferrer" 
                     className="learn-more-btn second-btn"
                   >

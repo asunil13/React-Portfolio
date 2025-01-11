@@ -7,7 +7,7 @@
   min-height: 100vh;
   box-sizing: border-box;
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll for the whole page */
+  overflow-x: hidden; 
 
   .project-title {
     font-size: 5rem;
@@ -28,20 +28,19 @@
 
   .projects-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Make sure the cards fit within the screen */
-    gap: 20px; /* Adjusted gap */
-    width: 100%; /* Full width without any horizontal overflow */
-    max-width: 100%; /* Prevent width from exceeding screen size */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px; 
+    width: 100%;
+    max-width: 100%; 
     margin: 20px auto;
     padding: 20px;
     box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scroll inside the gallery */
-    overflow-y: auto; /* Enable vertical scrolling */
-    max-height: calc(100vh - 150px); /* Ensure cards are scrollable vertically */
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    max-height: calc(100vh - 150px); 
 
-    /* Apply padding-left only on larger screens */
     @media screen and (min-width: 1200px) {
-      padding-left: 80px; /* Apply left padding only on large screens */
+      padding-left: 80px;
     }
 
     .project-card {
@@ -103,12 +102,11 @@
   }
 }
 
-/* Media Queries */
 @media screen and (max-width: 1200px) {
   .container.project-page {
     .projects-gallery {
-      width: 100%; /* Ensure full width */
-      margin-left: 0; /* Remove left margin on smaller screens */
+      width: 100%; 
+      margin-left: 0;
     }
   }
 }
@@ -116,7 +114,7 @@
 @media screen and (max-width: 968px) {
   .container.project-page {
     .projects-gallery {
-      gap: 20px; /* Adjust gap for medium screens */
+      gap: 20px; 
     }
   }
 }
@@ -124,24 +122,24 @@
 @media screen and (max-width: 480px) {
   .container.project-page {
     .projects-gallery {
-      gap: 10px; /* Smaller gap on very small screens */
+      gap: 10px;
     }
 
     .project-card {
-      padding: 10px; /* Adjust padding for smaller cards */
+      padding: 10px;
     }
 
     h3 {
-      font-size: 1.8rem; /* Smaller heading size */
+      font-size: 1.8rem; 
     }
 
     .description {
-      font-size: 1.4rem; /* Smaller description size */
+      font-size: 1.4rem; 
     }
 
     .learn-more-btn {
-      font-size: 1.2rem; /* Smaller button size */
-      min-width: 120px; /* Adjust button width */
+      font-size: 1.2rem; 
+      min-width: 120px; 
     }
   }
 }
